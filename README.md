@@ -10,10 +10,11 @@ To install this toolbox:
 
 ```matlab
 tempPath = userpath;
-if tempPath(end)=='/'
+s = filesep;
+if tempPath(end)==s
     tempPath(end) = [];
 end
-addpath([tempPath '/johnlb-delta-sigma/matlab'])
+addpath([tempPath s 'johnlb-delta-sigma' s 'matlab'])
 
 clear all;
 ```
